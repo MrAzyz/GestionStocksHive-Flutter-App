@@ -1,16 +1,30 @@
-# gestion_stocks_hive
+# Gestion Stocks Hive (Flutter Desktop)
 
-A new Flutter project.
+A simple Flutter desktop application for managing stock inventory using Hive as a local database. The app supports two types of products:
+- **Mauvaise Condition** (Defective goods)
+- **Bonne Condition** (Good condition goods)
 
-## Getting Started
+Each product type is stored in its own Hive box. Users can add, list, and delete items, as well as upload and display images for each product. For "Bonne Condition" items, a unique position (volume, zone, emplacement) is enforced.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Add / List / Delete** for both “Mauvaise Condition” and “Bonne Condition” products
+- Image selection via native file picker, with images stored in a local folder
+- Unique position constraint for “Bonne Condition” products (Type: A/B/C, Zone: x/y/z, Emplacement: 1–6)
+- Persistent local storage with Hive (no external database required)
+- Simple desktop UI with two tabs (BottomNavigationBar)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## Requirements
+
+- Flutter SDK (≥ 2.19.0) with desktop support enabled (Windows / macOS / Linux)
+- Dart SDK
+- A desktop platform toolchain:
+  - **Windows**: Visual Studio (Desktop Development with C++)
+  - **macOS**: Xcode and Xcode command-line tools
+  - **Linux**: GTK3 & build-essential packages
+
+
